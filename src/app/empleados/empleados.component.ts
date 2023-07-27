@@ -8,6 +8,8 @@ import { Component } from "@angular/core";
 })
 
 export class EmpleadosComponent{
-
+    nombreEmpresa="Domusvi Caca S.A.";
 }
+
+
 

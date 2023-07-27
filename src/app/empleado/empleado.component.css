@@ -1,3 +1,10 @@
 p{
     background-color: aquamarine;
 }
+
+#parrafoGrande{
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+    color: bisque;
+}

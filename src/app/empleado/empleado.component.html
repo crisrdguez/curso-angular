@@ -1,1 +1,13 @@
-<p>Aqui iria un empleado</p>
+<p>Nombre:{{name}}, {{surname}}. ID:{{getId()}}</p>
+<p>Edad:{{age+1}}</p>
+<p>Es mayor de edad? -> {{age>18 ? "Si" : "no"}}</p>
+<p>Puesto:{{puesto.value}}</p>
+
+<label>Puesto:</label>
+<input type="text" #puesto>
+<input type="button" value="Dale" (click)="getPuesto(puesto.value)"/>
+<br><br>
+<input type="text" #escritoLibre (keyup)="0">
+
+<p id="parrafoGrande">{{escritoLibre.value}}</p>
+
