@@ -52,7 +52,16 @@ export class EmpleadoComponent implements OnInit {
 
   cambiaCiudad(event:Event){
     //alert(event.target);
-    this.textoCiudad="La ciudad es " + (<HTMLInputElement>event.target).value;
+    this.textoCiudad="La ciudad es " + (<HTMLInputElement>event.target).value;//hacemos un cast
+  }
+
+  //Two Way Binding
+  empresa1="Google";
+  empresa2="Amazon";
+
+  
+  cambiaEmpresa(event:Event){
+    this.empresa1=(<HTMLInputElement>event.target).value;
   }
 
   getId(){

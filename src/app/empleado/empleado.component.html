@@ -43,5 +43,14 @@ Ciudades:
 <label for="valencia">Valencia</label>
 <input type="radio" name="ciudad" id="aranjuez" value="Aranjuez" [checked]="disabledProperty" (click)="cambiaCiudad($event)">
 <label for="aranjuez">Aranjuez</label>
-
-
+<br><br>
+*************************************************************
+<br><br>
+<!--Two Way Binding-->
+Introduce la empresa deseada: <input type="text" (input)="cambiaEmpresa($event)"> <!--Con esta unica linea, el flujo va del template al html-->
+<!--para hacerlo bidireccional entra en juego la directiva ngModel y [()]-->
+<br>
+Introduce la segunda empresa deseada, usando two way binding: <input type="text" [(ngModel)]="empresa2"> <!--Al usar [(ngModel)] tengo que importar en el archivo app.module.ts FormsModule-->
+<br>
+<p id="empresaTexto1">La empresa1 es: {{empresa1}}</p>
+<p id="empresaTexto2">La empresa2 es: {{empresa2}}</p>
