@@ -5,9 +5,18 @@
 
 <label>Puesto:</label>
 <input type="text" #puesto>
-<input type="button" value="Dale" (click)="getPuesto(puesto.value)"/>
+<!--<input type="button" value="Dale" (click)="getPuesto(puesto.value)"/>--> 
+<!--esa función no hace nada y solo es para que la página recargue dinámicamente y actualice el valor de empresa por lo que si ponemos null tb valdria-->
+<input type="button" value="Dale" (click)=null/>
 <br><br>
-<input type="text" #escritoLibre (keyup)="0">
+<input type="text" #escritoLibre (keyup)="0" [disabled]="disabledProperty">
 
 <p id="parrafoGrande">{{escritoLibre.value}}</p>
+
+<br><br>
+
+<h2>Registrado</h2>
+<input type="checkbox" id="registro" [checked]="userRegistradoProperty"/>
+
+{{cambioRegistroUsuario()}}
 
