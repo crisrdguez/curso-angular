@@ -20,3 +20,28 @@
 
 {{cambioRegistroUsuario()}}
 
+<br><br>
+<h2>Probando event binding, dale click a ver que pasa</h2>
+<input type="checkbox" id="registro2" [checked]="eventBinding" (click)="ventanaEmergente()"/>
+
+{{cambioEventBiending()}}
+
+<!--Utilizo otro checkbox para probar interpolacion, property binding y event binding-->
+<p class="parr2">{{textoRegistro}}</p> <!--Interpolacion-->
+<p class="parr2">Desea registrar un empleado?</p>
+<!--Cuando haga click en el checkbox el textoRegistro cambiara-->
+Si<input type="checkbox" id="registro3" [checked]="disabledProperty" (click)="registrarEmpleado()"/> <!--En este caso el checked=false, por eso siempre aparece no clickeado-->
+
+<br>
+************************************************************
+<br>
+<p>{{textoCiudad}}</p>
+Ciudades:
+<input type="radio" name="ciudad" id="madrid" value="Madrid" [checked]="disabledProperty" (click)="cambiaCiudad($event)"> <!--Le pasamos por parametro el objeto de tipo event-->
+<label for="madrid">Madrid</label>
+<input type="radio" name="ciudad" id="valencia" value="Valencia" [checked]="disabledProperty" (click)="cambiaCiudad($event)">
+<label for="valencia">Valencia</label>
+<input type="radio" name="ciudad" id="aranjuez" value="Aranjuez" [checked]="disabledProperty" (click)="cambiaCiudad($event)">
+<label for="aranjuez">Aranjuez</label>
+
+
