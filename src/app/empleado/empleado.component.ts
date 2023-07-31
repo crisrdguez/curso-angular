@@ -15,6 +15,12 @@ export class EmpleadoComponent implements OnInit {
   //property binding
   disabledProperty=false;
 
+  escritoLibreValue: string = ''; // Variable para almacenar el valor del campo de entrada
+
+  onEscritoLibreKeyUp(event: KeyboardEvent): void {
+    this.escritoLibreValue = (event.target as HTMLInputElement).value; // Obtener el valor del campo de entrada
+  }
+
   //propiedad registrado
   userRegistradoProperty=false;
 

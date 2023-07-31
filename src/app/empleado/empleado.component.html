@@ -9,9 +9,17 @@
 <!--esa función no hace nada y solo es para que la página recargue dinámicamente y actualice el valor de empresa por lo que si ponemos null tb valdria-->
 <input type="button" value="Dale" (click)=null/>
 <br><br>
-<input type="text" #escritoLibre (keyup)="0" [disabled]="disabledProperty">
-
+<!--#escritoLibre: Aquí, se define una referencia local llamada "escritoLibre". Esta referencia se puede utilizar para acceder al elemento del DOM desde el código del componente.-->
+<!--(keyup)="0": Esto es un evento que se dispara cuando se suelta una tecla después de haberla presionado en el campo de entrada de texto. El evento está vinculado a una expresión "0", que básicamente no hace nada (es una forma poco convencional de manejar el evento). -->
+<input type="text" #escritoLibre (keyup)="0" [disabled]="disabledProperty" placeholder="sin funcion asociada">
 <p id="parrafoGrande">{{escritoLibre.value}}</p>
+
+<!--Parecido a lo anterior, Lo cambio, utilizo una funcion para manejar el evento keyup-->
+<input type="text" #escritoLibre2 (keyup)="onEscritoLibreKeyUp($event)" [disabled]="disabledProperty">
+
+<p id="parrafoGrande">{{escritoLibreValue}}</p>
+
+
 
 <br><br>
 
