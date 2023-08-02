@@ -4,6 +4,9 @@
     <br>
     <span>Saludo:{{saludo}}</span>
     <br>
+    <input type="text" placeholder="Nombre de la empresa" [(ngModel)]="nombreEmpresa"/>
+    <!--$event es el evento que despachamos desde el componente hijo-->
+    <app-empleados [empresaVariable]="nombreEmpresa" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-empleados>
     <app-empleados></app-empleados>
 
     

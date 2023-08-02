@@ -76,7 +76,7 @@ export class EmpleadoComponent implements OnInit {
   constructor(){}
 
   ngOnInit(): void {
-      
+      //instrucciones previas a la renderizacion del componente
   }
 
   
